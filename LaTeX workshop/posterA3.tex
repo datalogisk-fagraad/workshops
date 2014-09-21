@@ -1,0 +1,155 @@
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} 
+\usepackage[margin=2.5cm]{geometry}
+\geometry{a3paper}
+\usepackage{longtable}
+\usepackage{lmodern} % Allows you to get bigger fonts than Huge
+
+
+%----------------------------KODE START---------------------------------------
+\usepackage{listings}
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{
+  basicstyle=\footnotesize,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=10pt,
+  backgroundcolor=\color{white},
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  rulecolor=\color{black},        
+  tabsize=4,
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                   % show the filename of files included with \lstinputlisting;
+                                  % also try caption instead of title
+  keywordstyle=\color{mauve},          % keyword style
+  commentstyle=\color{Maroon},       % comment style
+  stringstyle=\color{BlueViolet},         % string literal style
+  escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+  morekeywords={*,...},              % if you want to add more keywords to the set
+  deletekeywords={...}              % if you want to delete keywords from the given language
+}
+%----------------------------KODE SLUT----------------------------------------
+
+
+\setlength\parindent{0pt} % Makes \noindent standard
+\usepackage{graphicx,soul,lipsum} 
+\usepackage{sidecap}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float} 
+\usepackage{wrapfig} % Allows in-line images if needed
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\hypersetup{colorlinks=false,hidelinks, citecolor=black, urlcolor=black}
+\usepackage{csquotes}
+\usepackage{comment}
+
+\usepackage[dot, autosize, outputdir="dotgraphs/"]{dot2texi}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\usepackage[titletoc]{appendix} % Names appendices "Appendix A"
+                                % instead of just A in Contents
+\usepackage[bottom]{footmisc}
+\usepackage{pdfpages}
+\usepackage{algorithm}% http://ctan.org/pkg/algorithms
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+
+
+%\usepackage{lmodern}
+\usetikzlibrary{arrows,automata}
+\usepackage{verbatim}
+
+\linespread{1.2} 
+\graphicspath{{./figures/}} 
+
+% fancy drawings
+\usepackage{pgf}
+\usepackage{epigraph}
+
+% \epigraphsize{\small}% Default
+\setlength\epigraphwidth{8cm}
+\setlength\epigraphrule{0pt}
+
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\epigraph}{\@epitext{#1}}{\itshape\@epitext{#1}}{}{}
+\makeatother
+
+%\usepackage{boxproof}
+%\usepackage{nomencl}
+\usepackage{natbib}
+
+\newcommand{\fasto}{\textsc{Fasto} }
+\newcommand{\mips}{\textsc{Mips} }
+\newcommand{\mars}{Mars }
+\makeatletter
+\def\HUGE{\@setfontsize\HUGE{65}{90}}
+\makeatother
+\begin{document}
+\thispagestyle{empty}
+
+\centering
+
+{\fontsize{5cm}{1em}\selectfont 
+\bf \LaTeX{} {\color[rgb]{1,0,0} w}{\color[rgb]{0,1,0} o}{\color[rgb]{0,0,1} r}{\color[rgb]{1,1,0} k}{\color[rgb]{0,1,1} s}{\color[rgb]{1,0,1} h}{\color[rgb]{1,0,0} o}{\color[rgb]{0,1,0}p}}\\[0.4cm]
+
+{\fontsize{1cm}{1em}\selectfont {\textbf{Imponér din instruktor!}}}\\[0.5cm]
+
+{\fontsize{0.8cm}{1em}\selectfont {\textbf{Slip fri af Word! }}}\\[0.5cm]
+
+{\fontsize{0.6cm}{1em}\selectfont {\textbf{Pæne afleveringer!}}}\\[0.5cm]
+
+\bigskip
+
+\begin{minipage}[b]{0.37\textwidth}
+{\fontsize{0.8cm}{1em}\selectfont {\textbf{\raggedright HVAD}}}\par
+{\fontsize{0.6cm}{1em}\selectfont {En uformel introduktion til \LaTeX{} afholdt af dine medstuderende.}} \\[1.3cm]
+%\medskip
+
+{\fontsize{0.8cm}{1em}\selectfont {\textbf{\raggedright HVOR}}}\par
+{\fontsize{0.6cm}{1em}\selectfont {Vi starter med en introduktion i Lille UP 1, og rykker eventuelt på øvelsesgangen, når vi kommer til øvelserne. }}\\[1.3cm]
+%\medskip
+
+{\fontsize{0.8cm}{1em}\selectfont {\textbf{\raggedright HVORNÅR}}}\par
+{\fontsize{0.6cm}{1em}\selectfont {1. oktober 2014 kl. 17:00}}\\[2.5cm]
+
+\end{minipage}
+\begin{minipage}[b]{0.6\textwidth}
+\normalsize
+\includegraphics[width=\linewidth]{latex_lion.png}
+
+\end{minipage}\hspace{5pt}\\[1cm]
+
+\centering
+%\large{\textbf{Vi glæder os til}}\\[0.5cm]
+%\Large{\textbf{1. oktober $\cdot$ 2014}}\\[0.5cm]
+
+{\fontsize{0.8cm}{1em}\selectfont {\textbf{Datalogisk Fagråd}}}\\[1cm]
+{\fontsize{0.6cm}{1em}\selectfont {\textbf{$\ddot\smile$ $\ddot\smile$ $\ddot\smile$}}}\\[1cm]
+{\fontsize{3cm}{1em}\selectfont {\textbf{{\color[rgb]{0,0,1}1}{\color[rgb]{1,1,0}.} {\color[rgb]{0,1,1}o}{\color[rgb]{1,0,1}k}{\color[rgb]{1,0,0}t}{\color[rgb]{0,1,0}o}{\color[rgb]{0,0,1}b}{\color[rgb]{1,1,0}e}{\color[rgb]{0,1,1}r} {\color[rgb]{1,0,1}$\cdot$} {\color[rgb]{1,0,0}2}{\color[rgb]{0,1,0}0}{\color[rgb]{0,0,1}1}{\color[rgb]{1,1,0}4}}}}\\
+
+
+%-----------------------------------------------------------------------------
+\end{document}
