@@ -95,6 +95,5 @@ latexmkrc
 #main.pdf
 
 .DS_Store
-*.pdf
 *.o
 *.hi
