@@ -138,7 +138,7 @@ Så hyg dig med det, brug Google og menneskerne omkring dig, hvis du ikke på fo
 
 Det kan anbefales, at bygge din preamble op med kommentarer, sådan at du ved, hvad de forskellige pakker gør og bruges til $\ddot\smile$ . En kommentar i \LaTeX{} laves ved hjælp af \% - sæt tegnet foran en sætning, og vupti - du har en kommentar, som ikke vises i den generede PDF. 
 
-\section{Opgave 0 - Matematik}
+\section{Matematik}
 	\begin{enumerate}
   		\item Hvilke pakker, skal bruges for at løse de efterfølgende opgaver?
   		\item Indskriv følgende:
@@ -150,7 +150,6 @@ Det kan anbefales, at bygge din preamble op med kommentarer, sådan at du ved, h
 				\item $k_{n+1} = n^2 + k_n^2 - k_{n-1}$
 			\end{enumerate}
  		\item Indskriv følgende 2:
-	\end{enumerate}
 \begin{center}
 	$A_{m,n} =
  	\begin{bmatrix}
@@ -169,11 +168,13 @@ Det kan anbefales, at bygge din preamble op med kommentarer, sådan at du ved, h
     \end{array}
   \!\right) = \frac{n!}{r!(n-r)!}
 \end{align}
+		\item Er der forskel på at skrive $^*$ eller ingen ting efter align i begin\{align\}?
+	\end{enumerate}
 
 Alle opgaver burde kunne løses med informationer fra denne side:\\
 \url{http://en.wikibooks.org/wiki/LaTeX/Mathematics}
 
-\section{Opgave 1 - Tabeller}
+\section{Tabeller}
 	\begin{enumerate}
   		\item Hvilke pakker, skal bruges for at løse de efterfølgende opgaver?
   		\item Indskriv følgende tabel i \LaTeX{}:
@@ -197,18 +198,119 @@ state & states & \texttt{id} & * & = & \$ & S & L & R \\
 \end{tabular}
 \end{table}
 
- 		\item Hvad betyder det for ens tabel, hvis man skriver [H] efter \\begin\{table\}?
+ 		\item Hvad betyder det for ens tabel, hvis man skriver [H] efter begin\{table\}?
 	\end{enumerate}
 
 Alle opgaver burde kunne løses med informationer fra denne side:\\
 \url{http://en.wikibooks.org/wiki/LaTeX/Tables}
 
 \newpage
-\section{Opgave 0}
+\section{Billeder}
+	\begin{enumerate}
+  		\item Hvilke pakker, skal bruges for at løse de efterfølgende opgaver?
+		\item Find et par billeder og placer dem på følgende måder:\\
+	
+		\includegraphics[scale=0.5]{cat}
+	
+		\includegraphics[scale=0.5, angle=180]{cat}
+		
+		\item Hvordan placerer man to billeder ved siden af hinanden i \LaTeX{}?
+		\item Kan man også importere PDF'er til sin fil? I så fald hvordan?
+	\end{enumerate}
 
-\section{Opgave 0}
+\newpage
+\section{Grafer og andet sjov}
+Der er delte meninger om TikZ, men da personen, der har udarbejdet disse opgaver synes, det er et fantastisk værktøj, er her en opgave, der involverer TikZ $\ddot\smile$ - ligesom i opgaverne oven for, går det ud på at genskabe figurerne:\\
 
-\section{Opgave 0}
+\begin{center}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=gray,text=white]
+
+  \node[initial,state] (0) {$0$};
+  \node[state] (1) [above of=0] {$1$};
+  \node[state] (2) [above right of=0] {$2$};
+  \node[accepting,state] (3) [right of=0] {$3$};
+  \node[accepting,state] (4) [below right of=0] {$4$};
+  \node[state] (5) [below of=0] {$5$};
+  \node[accepting,state] (6) [above right of=1] {$6$};
+  \node[state] (7) [above right of=2] {$7$};
+  \node[accepting,state] (8) [below right of=5] {$8$};
+  \node[accepting,state] (9) [below left of=5] {$9$};
+  \node[accepting,state] (10) [right of=7] {$10$};
+
+  
+  \path 	(0)	edge node {id} (4)
+  			edge node {*} (5)
+			edge node {S} (1)
+			edge node {L} (2)
+			edge node {R} (3)
+		(1)	edge node {\$} (6)
+		(2)	edge node {=} (7)
+		(5)	edge node {id} (4)
+			edge [loop below] node {*} (5)
+			edge node {R} (8)
+			edge node {L} (9)
+		(7) 	edge node {R} (10);
+                	
+\end{tikzpicture}\\
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=gray,text=white]
+
+  \node[initial,state] (A) {$A$};
+  \node[state] (B) [right of=A] {$B$};
+  \node[accepting,state] (C) [right of=B] {$C$};
+  
+  \node[state] (D) [below of=A] {$D$};
+  \node[state] (E) [right of=D] {$E$};
+  \node[state] (F) [right of=E] {$F$};
+  \node[accepting,state] (G) [right of=F] {$G$};
+  
+  \node[state] (H) [below left of=D] {$H$};
+  \node[accepting,state] (I) [left of=H] {$I$};
+  
+  \node[state] (J) [below right of=H] {$J$};
+  \node[state] (K) [right of=J] {$K$};
+  \node[accepting,state] (L) [right of=K] {$L$};
+  
+  \node[state] (M) [below of=J] {$M$};
+  \node[accepting,state] (N) [right of=M] {$N$};
+  
+  \node[state] (O) [below right of=N] {$O$};
+  \node[accepting,state] (P) [right of=O] {$P$};
+  
+  \path 	(A)	edge node {S} (B)
+                		edge node {$\epsilon$} (D)
+                		edge [bend right] node {$\epsilon$} (H)
+           	(B)	edge node {\$} (C)
+           	(D)	edge node {L} (E)
+                 	edge node {$\epsilon$} (J)
+                 	edge [bend right] node {$\epsilon$} (M)
+           	(E) 	edge node {=} (F)
+           	(F) 	edge node {R} (G)
+                		edge [bend left] node {$\epsilon$} (O)
+		(H)	edge node {R} (I)
+			edge [bend right=75] node {$\epsilon$} (O)
+		(J)	edge node {*} (K)
+		(K)	edge node {R} (L)
+			edge [bend left] node {$\epsilon$} (O)
+		(M) 	edge node {id} (N)
+		(O) 	edge node {L} (P)
+		  	edge node {$\epsilon$} (M)
+			edge [bend right] node {$\epsilon$} (J);
+\end{tikzpicture}\\
+\end{center}
+
+
+\newpage
+\section{Keder du dig?}
+Hvis du keder dig, så lav et dokument, der ligner dette, men hvor henvisninger osv. er skrevet ind som referencer i stedet. \\
+
+\textbf{Hint:} Prøv at google bibtex. 
 	
 %\newpage
 %\bibliographystyle{plainnat}
