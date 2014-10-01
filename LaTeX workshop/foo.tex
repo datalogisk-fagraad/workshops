@@ -1,0 +1,97 @@
+
+\documentclass[10pt,a4paper,danish]{article}
+\usepackage[danish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xfrac}
+\usepackage[dot, autosize, outputdir="dotgraphs/"]{dot2texi}
+\usepackage{tikz}
+\usepackage{ulem}
+\usetikzlibrary{shapes}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\rhead{\today}
+\rfoot{\thepage}
+\setlength\parskip{1em}
+\setlength\parindent{0em}
+
+%% Titel og forfatter
+\title{\LaTeX{} Workshop}
+\author{Søren Pilgård, 190689, vpb984}
+
+%% Start dokumentet
+\begin{document}
+
+%% Vis titel
+\maketitle
+\newpage
+
+\section*{Introduktion til \LaTeX}
+
+Her kunne vi skrive noget klogt om latex.
+enes tnern teansrt eanrsetn arestn iearsntuhpk trf krpuf resnt airfk eargn rukt
+resnt raenf krftenr fiernf krfetnrepfng rfkturnfetrnf ernft enrfut nrfei rkets
+krfut nrfitn retnr efkregnrfn urf krfetnrfiedn grfen iefrng irefkgrie krfkg
+erngnquw ntrifet nrfietnri ntuarn firfe tnr.
+
+Her kunne vi skrive noget klogt om latex.
+enes tnern teansrt eanrsetn arestn iearsntuhpk trf krpuf resnt airfk eargn rukt
+resnt raenf krftenr fiernf krfetnrepfng rfkturnfetrnf ernft enrfut nrfei rkets
+krfut nrfitn retnr efkregnrfn urf krfetnrfiedn grfen iefrng irefkgrie krfkg
+erngnquw ntrifet nrfietnri ntuarn firfe tnr.
+
+\subsection{Noget mere om \LaTeX}
+resnt raenf krftenr fiernf krfetnrepfng rfkturnfetrnf ernft enrfut nrfei rkets
+krfut nrfitn retnr efkregnrfn urf krfetnrfiedn grfen iefrng irefkgrie krfkg
+erngnquw ntrifet nrfietnri ntuarn firfe tnr.
+
+resnt raenf krftenr fiernf krfetnrepfng rfkturnfetrnf ernft enrfut nrfei rkets
+krfut nrfitn retnr efkregnrfn urf krfetnrfiedn grfen iefrng irefkgrie krfkg
+erngnquw ntrifet nrfietnri ntuarn firfe tnr.
+
+resnt raenf krftenr fiernf krfetnrepfng rfkturnfetrnf ernft enrfut nrfei rkets
+krfut nrfitn retnr efkregnrfn urf krfetnrfiedn grfen iefrng irefkgrie krfkg
+erngnquw ntrifet nrfietnri ntuarn firfe tnr.
+
+Dette \textit{ord} \textbf{skal} være \texttt{skråt}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{and.jpg}
+  \caption{Det er en and}
+  \label{fig:and}
+\end{figure}
+
+I figur \ref{fig:and} ses en and.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}[h]{l|c|r}
+    Dyr & Antal & Status \\
+    \hline
+    \hline
+    and & 3 & søde \\
+    \hline
+    Løve & 1 & farlig \\
+  \end{tabular}
+  \caption{Alle mine dyr}
+  \label{tbl:mine-dyr}
+\end{table}
+
+I figur \ref{tbl:mine-dyr} har vi mine dyr.
+
+
+
+Jeg vil gerne vise formlen \(f(x) = a^{x}\) og noget andet.
+\[f(x) = a^{2x} + n_{1 + k} \sqrt{2} \]
+
+\[\frac{1}{2} 2 \cdot \pi \times 5\]
+\end{document}
